@@ -1,14 +1,14 @@
 #!/bin/bash
 
-# Install Node.js and npm if not already installed
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-source ~/.nvm/nvm.sh
-nvm install node
+# Update package list
+sudo yum update -y
 
-# Make npm globally accessible in this session
-export PATH=$PATH:/root/.nvm/versions/node/$(nvm version)/bin
+# Install Node.js and npm (use a specific version if required)
+curl -sL https://rpm.nodesource.com/setup_18.x | sudo -E bash -
+sudo yum install -y nodejs
 
-# Verify npm installation
+# Verify installation
+node -v
 npm -v
 
 cd /home/ubuntu/simple-nodejs-app
