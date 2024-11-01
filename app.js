@@ -3,7 +3,7 @@ const app = express();
 const path = require('path');
 const userRoutes = require('./routes/user');
 
-// Middleware to serve static files from "public" directory
+// Middleware to serve static files from "public" dir
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Middleware to parse form data
