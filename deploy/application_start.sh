@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# Ensure Node.js and npm are installed (if they aren’t already from a previous step)
 curl -sL https://rpm.nodesource.com/setup_18.x | sudo -E bash -
 sudo yum install -y nodejs
 
